@@ -3,37 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     <title>Cadastro</title>
 </head>
 <body>
     
     <div>
-        <h1>Cadastro de Funcionários</h1>
-        <p>Complete suas informações</p>
+        <h1 id="titulo">Cadastro de Funcionários</h1><br>
+        <p id="subtitulo">Complete suas informações</p>
         <br>
     </div>
 
     <form>
-        <fieldset>
-            <div>
-                <label>Nome</label>
-                <input type="text" name="nome" id="nome">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
             </div>
 
-            <div>
-                <label>Sobrenome</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
             </div>
         </fieldset>
 
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" id="email">
+        <div class="campo">
+            <label for="email"><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" required>
         </div>
 
-        <div>
-            <label>Em qual área da Engenharia você atua?</label>
+        <div class="campo">
+            <label><strong>Em qual área da Engenharia você atua?</strong></label>
             <label>
                 <input type="radio" name="eng" value="projetos" checked>Projetos
             </label>
@@ -45,15 +46,44 @@
             </label>
         </div>
 
-        <div>
-            <label>Senioridade</label>
-            <select id="senioridade">
+        <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select id="senioridade" required>
+                <option selected disabled value="">Selecione</option>
                 <option>Júnior</option>
                 <option>Pleno</option>
                 <option>Sênior</option>
-
             </select>
         </div>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
+                <input type="checkbox" id="tecnologia1" name="tecnologia1" value="TQS">
+                <label for="tecnologia1">TQS</label>
+                <input type="checkbox" id="tecnologia2" name="tecnologia2" value="Project">
+                <label for="tecnologia2">Project</label>
+                <input type="checkbox" id="tecnologia3" name="tecnologia3" value="Power BI">
+                <label for="tecnologia3">Power BI</label>
+                <input type="checkbox" id="tecnologia4" name="tecnologia4" value="Word">
+                <label for="tecnologia4">Word</label>
+                <input type="checkbox" id="tecnologia5" name="tecnologia5" value="Excel">
+                <label for="tecnologia5">Excel</label>
+                <input type="checkbox" id="tecnologia6" name="tecnologia6" value="Revit">
+                <label for="tecnologia6">Revit</label>
+                <input type="checkbox" id="tecnologia7" name="tecnologia7" value="Navisworks">
+                <label for="tecnologia7">Navisworks</label>
+            </div>
+        </fieldset>
+
+        <div class="campo">
+            <br>
+            <label for="experiencia"><strong>Conte um pouco da sua experiência:</strong></label><br>
+            <textarea rows="6" style="width: 30.2em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <button class="botao" type="submit" onsubmit="">Concluído</button>
+
     </form>
 
 </body>
